@@ -8,7 +8,7 @@ from collections import OrderedDict
 # Basic CNN of Ragoza et al. 2017
 class Basic_CNN(nn.Module):
   def __init__(self, dims):
-    super(Net, self).__init__()
+    super(Basic_CNN, self).__init__()
     self.pool0 = nn.MaxPool3d(2)
     self.conv1 = nn.Conv3d(dims[0], 32, kernel_size=3, padding=1)
     self.pool1 = nn.MaxPool3d(2)
