@@ -107,7 +107,7 @@ for it in range(num_batches):
     labels = float_labels.long().to('cuda')
 
     # Predict
-    output = F.softmax(model(input_tensor), dim=0)
+    output = F.softmax(model(input_tensor), dim=1)
     predictions.extend(list(output.detach().cpu().numpy()[:,1]))
 
     # Progress
