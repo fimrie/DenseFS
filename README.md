@@ -1,5 +1,9 @@
 # DenseFS
 
+![](DenseFS-architecture.jpeg)
+
+This repository contains our implementation of [Protein family-specific models using deep neural networks and transfer learning improve virtual screening and highlight the need for more data](https://pubs.acs.org/doi/10.1021/acs.jcim.8b00350) (DenseFS).
+
 If you found DenseFS useful, please cite our paper:
 
 [Imrie F, Bradley AR, van der Schaar M, Deane CM. Protein family-specific models using deep neural networks and transfer learning improve virtual screening and highlight the need for more data, Journal of Chemical Information and Modeling. 2018, 58(11), 2319-2330.](https://pubs.acs.org/doi/10.1021/acs.jcim.8b00350)
