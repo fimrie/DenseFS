@@ -5,9 +5,14 @@ import torch.optim as optim
 
 from collections import OrderedDict
 
+# Weight initialization function
+def weights_init(m):
+    if isinstance(m, nn.Conv3d) or isinstance(m, nn.Linear):
+        nn.init.xavier_uniform_(m.weight.data)
+
 # Basic CNN of Ragoza et al. 2017
 class Basic_CNN(nn.Module):
-  def __init__(self, dims):
+  def __init__(self, dims, num_classes=2):
     super(Basic_CNN, self).__init__()
     self.pool0 = nn.MaxPool3d(2)
     self.conv1 = nn.Conv3d(dims[0], 32, kernel_size=3, padding=1)
@@ -17,7 +22,7 @@ class Basic_CNN(nn.Module):
     self.conv3 = nn.Conv3d(64, 128, kernel_size=3, padding=1)
 
     self.last_layer_size = dims[1]//8 * dims[2]//8 * dims[3]//8 * 128
-    self.fc1 = nn.Linear(self.last_layer_size, 2)
+    self.fc1 = nn.Linear(self.last_layer_size, num_classes)
 
   def forward(self, x):
     x = self.pool0(x)
