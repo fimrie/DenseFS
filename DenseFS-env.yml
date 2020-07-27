@@ -1,0 +1,13 @@
+name: DenseFS-env
+channels:
+  - pytorch
+  - jsunseri
+  - anaconda
+  - defaults
+dependencies:
+  - pytorch=1.4
+  - torchvision
+  - molgrid
+  - python
+  - scikit-learn
+  - numpy
