@@ -26,6 +26,7 @@ conda activate DenseFS-env
 We have implemented two CNN architectures, which can be found in `models.py`. These are specified when using the scripts by --model / -m.
 
 Ragoza - This refers to the three-layer CNN architecture described in [Ragoza et al., 2017](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740).
+
 Imrie - This refers to the DenseNet-based CNN architecture described in [Imrie et al., 2018](https://pubs.acs.org/doi/10.1021/acs.jcim.8b00350).
 
 # Example usage
