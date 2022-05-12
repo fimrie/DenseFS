@@ -31,6 +31,8 @@ def parse_args(argv=None):
     parser.add_argument('--display_iter',type=int,default=50,help='Print out network outputs every so many iterations')
 
     parser.add_argument('--num_rotate',type=int,help="Number of random rotations to perform during testing",default=1)
+    
+    parser.add_argument('--evaluate',action='store_true',default=False,help="Evaluate performance using AUCROC")
     args = parser.parse_args(argv)
     
     return args
@@ -108,7 +110,8 @@ def main(args):
     # Print performance
     labels = labels[:num_samples]
     predictions = predictions[:num_samples]
-    print("Test AUC: %.2f" % (roc_auc_score(labels, predictions)), flush=True)
+    if args.evaluate:
+        print("Test AUC: %.2f" % (roc_auc_score(labels, predictions)), flush=True)
 
     # Save predictions
     output_lines = []
