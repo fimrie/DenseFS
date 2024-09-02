@@ -49,3 +49,17 @@ python CNN_test.py -m Imrie --weights model.iter-250 --test_file ./data/small.ty
 # Contact (Questions/Bugs/Requests)
 
 Please submit a Github issue or contact Fergus Imrie [imrie@stats.ox.ac.uk](mailto:imrie@stats.ox.ac.uk).
+
+# Citation (BibTex)
+@Article{Imrie2018,
+    author={Imrie, Fergus and Bradley, Anthony R. and van der Schaar, Mihaela and Deane, Charlotte M.},
+    title={Protein Family-Specific Models Using Deep Neural Networks and Transfer Learning Improve Virtual Screening and Highlight the Need for More Data},
+    journal={Journal of Chemical Information and Modeling},
+    year={2018},
+    month={Oct},
+    day={1},
+    publisher={American Chemical Society},
+    issn={1549-9596},
+    doi={10.1021/acs.jcim.8b00350},
+    url={https://doi.org/10.1021/acs.jcim.8b00350}
+}
